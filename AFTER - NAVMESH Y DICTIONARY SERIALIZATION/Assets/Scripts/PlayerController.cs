@@ -32,6 +32,12 @@ public class PlayerController : MonoBehaviour
             GameManager.addScore();
             Destroy(other.gameObject);
         }
+
+        if (other.gameObject.CompareTag("Powers"))
+        {
+            GameManager.addPower();
+            Destroy(other.gameObject);
+        }
     }
 
     private Vector3 GetPositionTo(Vector3 newPosition)
